@@ -15,11 +15,14 @@ window.addEventListener("load", function() {
 });
 
 document.querySelector("#play").addEventListener("click", function() {
-	console.log("Play Video");
-	var video = document.querySelector("video");
-	var volume = video.volume;
-	document.querySelector('#volume').textContent=this.value + '%';
-	video.onplay = video.play();
+// 	console.log("Play Video");
+// 	var video = document.querySelector("video");
+// 	var volume = video.volume;
+// 	document.querySelector('#volume').textContent=this.value + '%';
+// 	video.onplay = video.play();
+	video.play()
+	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
+ 	console.log("Play Video");
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
