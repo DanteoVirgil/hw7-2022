@@ -2,27 +2,19 @@ var video;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-// 	document.getElementById("mp4_src").src = "movie.mp4";
-// 	document.getElementById("ogg_src").src = "movie.ogg";
-// 	var video = document.getElementsByClassName("video");
-// 	video.autoplay = false;
-// 	document.getElementsByClassName("video").load();
-	video = document.querySelector("#player1")
-	video.autoplay = false
-	console.log("Autoplay is set to" + video.autoplay)
-	video.loop = false
-	console.log("Loop is set to " + video.loop)
+	document.getElementById("mp4_src").src = "movie.mp4";
+	document.getElementById("ogg_src").src = "movie.ogg";
+	var video = document.getElementsByClassName("video");
+	video.autoplay = false;
+	document.getElementsByClassName("video").load();
 });
 
 document.querySelector("#play").addEventListener("click", function() {
-// 	console.log("Play Video");
-// 	var video = document.querySelector("video");
-// 	var volume = video.volume;
-// 	document.querySelector('#volume').textContent=this.value + '%';
-// 	video.onplay = video.play();
-	video.play()
-	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
- 	console.log("Play Video");
+	console.log("Play Video");
+	var video = document.querySelector("video");
+	var volume = video.volume;
+	document.querySelector('#volume').textContent=this.value + '%';
+	video.onplay = video.play();
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
