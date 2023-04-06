@@ -2,8 +2,8 @@ var video;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-	document.getElementById("mp4_src").src = "movie.mp4";
-	document.getElementById("ogg_src").src = "movie.ogg";
+// 	document.getElementById("mp4_src").src = "movie.mp4";
+// 	document.getElementById("ogg_src").src = "movie.ogg";
 	var video = document.getElementsByClassName("video");
 	video.autoplay = false;
 	document.getElementsByClassName("video").load();
