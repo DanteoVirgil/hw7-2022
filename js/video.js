@@ -13,7 +13,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	var video = document.querySelector("video");
 	var volume = video.volume;
-	console.log(volume)
+	document.querySelector('#volume').textContent=this.value + '%';
 	video.onplay = video.play();
 });
 
@@ -26,14 +26,14 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down Video");
 	var video = document.querySelector("video");
-	video.playbackRate -= 0.1;
+	video.playbackRate *=0.90;
 	console.log("New speed is:", video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed Up Video");
 	var video = document.querySelector("video");
-	video.playbackRate += 0.1;
+	video.playbackRate /= 0.90;
 	console.log("New speed is:", video.playbackRate);
 });
 
@@ -41,6 +41,9 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Skip 10 seconds Ahead");
 	var video = document.querySelector("video");
 	video.currentTime += 10;
+	if (video.currentTime >= video.duration){
+		video.currentTime = 0;
+	}
 	console.log("New time:", video.currentTime);
 });
 
