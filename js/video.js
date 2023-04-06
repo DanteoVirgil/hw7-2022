@@ -1,4 +1,4 @@
-// var video = document.getElementsByClassName("video");
+var video;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
